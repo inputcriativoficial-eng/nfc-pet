@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Tag Inteligente - Input Criativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-color: #00ff9d; /* Verde Neon da sua marca */
+            --text-color: #ffffff;
+            --danger-color: #ff4d4d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .pet-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #30363d;
+        }
+
+        .alert-card {
+            border-left: 5px solid var(--danger-color);
+        }
+
+        h1 { font-size: 1.5rem; margin: 5px 0; }
+        h2 { font-size: 1.1rem; color: var(--accent-color); margin-bottom: 10px; }
+        p { margin: 5px 0; font-size: 0.9rem; color: #8b949e; }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--accent-color);
+            color: #000;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-emergency {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.7rem;
+            margin-top: 20px;
+            color: #484f58;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="foto.png" alt="Foto do Max" class="pet-photo">
+        <h1>Mel Calopsita (Nymphicus hollandicus)</h1>
+        <p>ID: #IC-99827</p>
+    </div>
+
+    <a href="tel:85999999999" class="btn">
+        <i class="fas fa-phone"></i> LIGAR PARA O DONO
+    </a>
+    <a href="https://wa.me/5585999999999" class="btn" style="background-color: #25d366; color: white;">
+        <i class="fab fa-whatsapp"></i> WHATSAPP DO DONO
+    </a>
+
+    <div class="card alert-card">
+        <h2><i class="fas fa-exclamation-triangle"></i> Informações Críticas</h2>
+        <p><strong>Alergias:</strong> Dipirona e Frango</p>
+        <p><strong>Condição:</strong> Cardíaco (Toma medicação)</p>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-info-circle"></i> Dados do Pet</h2>
+        <div class="info-grid">
+            <div>
+                <p><strong>Nascimento:</strong></p>
+                <p>12/05/2022</p>
+            </div>
+            <div>
+                <p><strong>Microchip:</strong></p>
+                <p>982.000.123</p>
+            </div>
+        </div>
+        <p style="margin-top:10px;"><strong>Temperamento:</strong> Muito dócil, mas se assusta com barulhos.</p>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-hospital"></i> Clínica de Referência</h2>
+        <p><strong>Vet 24h Input Criativo</strong></p>
+        <a href="#" class="btn btn-emergency">COMO CHEGAR NA CLÍNICA</a>
+    </div>
+
+    <div class="footer">
+        Tecnologia NFC fornecida por <strong>Input Criativo</strong><br>
+        Fortaleza, CE
+    </div>
+</div>
+
+</body>
+</html>
